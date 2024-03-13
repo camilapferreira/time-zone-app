@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  padding: 0 20px;
+}
+
+#countries-form {
+  padding: 10px;
+}
+
+#countries {
+  font-size: 16px;
+  margin: 10px 0;
+}
