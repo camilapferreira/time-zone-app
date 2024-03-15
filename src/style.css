@@ -1,11 +1,39 @@
 body {
-  font-family: sans-serif;
-  padding: 0 20px;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/213/original/joel-filipe-jU9VAZDGMzs-unsplash.jpg?1710517095");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+  color: aliceblue;
 }
 
-footer {
-  border-top: 1px solid #f9f7fe;
+h1 {
   text-align: center;
-  padding-top: 15px;
-  color: rgba(39, 33, 66, 0.4);
+  font-weight: 500;
+}
+
+.timezona-app {
+  background: rgba(12, 75, 120, 0.8);
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 8px;
+  margin: 30px auto;
+  padding: 50px;
+  max-width: 600px;
+  box-shadow: 0 10px 10px rgba(16, 6, 69, 0.8);
+}
+
+h2 {
+  font-weight: 400;
+}
+
+footer a {
+  color: rgb(82, 84, 193);
+}
+footer p {
+  color: rgb(49, 40, 119);
+  text-align: center;
+  margin: 0 auto;
+  font-size: 15px;
 }
