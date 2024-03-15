@@ -9,8 +9,17 @@ body {
 }
 
 h1 {
+  font-family: sans-serif;
   text-align: center;
-  font-weight: 500;
+  font-weight: 540;
+}
+
+select {
+  display: block;
+  font-family: sans-serif;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
 }
 
 .timezona-app {
@@ -19,13 +28,45 @@ h1 {
   background-attachment: fixed;
   border-radius: 8px;
   margin: 30px auto;
-  padding: 50px;
+  padding: 20px 35px;
   max-width: 600px;
   box-shadow: 0 10px 10px rgba(16, 6, 69, 0.8);
 }
 
+.city {
+  display: flex;
+  justify-content: space-between;
+  font-size: 19px;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px dashed grey;
+}
+.city:last-child {
+  border: none;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0 0 5px;
+  line-height: 1.5;
+}
+.date {
+  opacity: 0.7;
+  font-size: 15px;
+}
+
+.time {
+  font-size: 45px;
+  font-weight: 450;
+}
+
+.time small {
+  font-size: 18px;
+  vertical-align: middle;
+}
 h2 {
   font-weight: 400;
+  font-family: sans-serif;
 }
 
 footer a {
