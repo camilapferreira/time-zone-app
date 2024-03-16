@@ -68,7 +68,9 @@ h2 {
   font-weight: 400;
   font-family: sans-serif;
 }
-
+.all-cities-link {
+  color: aliceblue;
+}
 footer a {
   color: rgb(82, 84, 193);
 }
