@@ -38,22 +38,22 @@ function cityTime() {
 }
 
 //Update the cities list after selecting an option from the selector
-function updateCity(event) {
-  let citySelected = event.target.value;
-  if (citySelected === "local") {
-    citySelected = moment.tz.guess();
+function updateCity() {
+  if (!selectedCity) return;
+  if (selectedCity === "local") {
+    selectedCity = moment.tz.guess();
   }
-  let city = citySelected.replace("_", " ").split("/")[1];
+  let city = selectedCity.replace("_", " ").split("/")[1];
   let newList = document.querySelector("#cities-list");
-  let date = moment().tz(citySelected).format("MMMM Do YYYY");
-  let time = moment().tz(citySelected).format(`h:mm:ss [<small>]A[</small>]`);
+  let date = moment().tz(selectedCity).format("MMMM Do YYYY");
+  let time = moment().tz(selectedCity).format(`h:mm:ss [<small>]A[</small>]`);
   newList.innerHTML = `<div class="city">
           <div>
             <h2>${city}</h2>
-            <div class="date">${date}</div>
+            <div class="date" id="city-selector">${date}</div>
           </div>
           <div class="time">${time}</div>
-          </div> 
+          </div>
           </br>
           <a href="https://time-zone-app.netlify.app/" class="all-cities-link">All Cities</a>
         `;
@@ -63,4 +63,13 @@ cityTime();
 setInterval(cityTime, 1000);
 
 let citySelectorElement = document.querySelector("#city-select");
-citySelectorElement.addEventListener("change", updateCity);
+citySelectorElement.addEventListener("change", function (event) {
+  // Update the selectedCity with the new value when the selection changes
+  selectedCity = event.target.value;
+
+  // Call updateCity immediately upon selection to update without waiting for the interval
+  updateCity();
+});
+let selectedCity = null; // Store the selected city globally
+
+setInterval(updateCity, 1000);
