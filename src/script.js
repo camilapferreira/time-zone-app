@@ -39,6 +39,7 @@ function cityTime() {
 
 //Update the cities list after selecting an option from the selector
 function updateCity() {
+  // Check if a city has been selected, if not, return to avoid updating unnecessarily
   if (!selectedCity) return;
   if (selectedCity === "local") {
     selectedCity = moment.tz.guess();
@@ -59,6 +60,7 @@ function updateCity() {
         `;
 }
 
+// Update the city times every second
 cityTime();
 setInterval(cityTime, 1000);
 
@@ -70,6 +72,7 @@ citySelectorElement.addEventListener("change", function (event) {
   // Call updateCity immediately upon selection to update without waiting for the interval
   updateCity();
 });
+
 let selectedCity = null; // Store the selected city globally
 
 setInterval(updateCity, 1000);
