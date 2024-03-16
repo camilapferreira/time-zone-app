@@ -16,33 +16,39 @@
     <div class="timezona-app">
       <h1>World Clock</h1>
 
-      <select name="" id="">
+      <select name="" id="city-select">
         <option value="">Select a city</option>
-        <option value="">London</option>
-        <option value="">Valencia</option>
-        <option value="">São Paulo</option>
+        <option value="Europe/London">London 🇬🇧</option>
+        <option value="Europe/Paris">Paris 🇫🇷</option>
+        <option value="Europe/Moscow">Moscow 🇷🇺</option>
+        <option value="Australia/Sydney">Sydney 🇦🇺</option>
+        <option value="America/New_York">New York 🇺🇸</option>
+        <option value="Asia/Dubai">Dubai 🇦🇪</option>
+        <option value="Pacific/Auckland">Auckland 🇳🇿</option>
       </select>
 
-      <div class="city" id="valencia">
-        <div>
-          <h2>Valéncia 🇪🇸</h2>
-          <div class="date"></div>
+      <div id="cities-list">
+        <div class="city" id="valencia">
+          <div>
+            <h2>Valéncia 🇪🇸</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time"></div>
-      </div>
-      <div class="city" id="sao-paulo">
-        <div>
-          <h2>São Paulo 🇧🇷</h2>
-          <div class="date"></div>
+        <div class="city" id="sao-paulo">
+          <div>
+            <h2>São Paulo 🇧🇷</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time"></div>
-      </div>
-      <div class="city" id="tokyo">
-        <div>
-          <h2>Tokyo 🇯🇵</h2>
-          <div class="date"></div>
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Tokyo 🇯🇵</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time"></div>
       </div>
     </div>
     <footer>
@@ -64,7 +70,6 @@
         >
       </p>
     </footer>
-
     <script src="src/script.js"></script>
   </body>
 </html>

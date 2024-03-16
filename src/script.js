@@ -29,5 +29,25 @@ function cityTime() {
   tokyoDate.innerHTML = moment().tz("Asia/Tokyo").format("MMMM Do YYYY");
 }
 
+//Update the cities list after selecting an option from the selector
+
+function updateCity(event) {
+  let citySelected = event.target.value;
+  let city = citySelected.replace("_", " ").split("/")[1];
+  let newList = document.querySelector("#cities-list");
+  let date = moment().tz(citySelected).format("MMMM Do YYYY");
+  let time = moment().tz(citySelected).format(`h:mm:ss [<small>]A[</small>]`);
+  newList.innerHTML = ` <div class="city">
+          <div>
+            <h2>${city}</h2>
+            <div class="date">${date}</div>
+          </div>
+          <div class="time">${time}</div>
+        </div>`;
+}
+
 cityTime();
 setInterval(cityTime, 1000);
+
+let citySelectorElement = document.querySelector("#city-select");
+citySelectorElement.addEventListener("change", updateCity);
